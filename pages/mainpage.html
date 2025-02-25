@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../scripts.js"></script>
+</head>
+<body>
+
+<script>
+  function test(){
+      console.log('goida');
+  }
+</script>
+
+<header>
+
+  <span>
+
+   <img src="/assets/images/logo.svg">
+
+   <span>
+
+     <a class="image-text-wrapper control" href="#">
+       <img src="../assets/images/sections_icon.svg">
+       <h4>Розділи</h4>
+     </a>
+
+     <a class="control" href="#">
+       <h4>Бібліотека</h4>
+     </a>
+
+     <a class="control active" href="#">
+       <h4>Відеоблог</h4>
+     </a>
+
+     <a class="control" href="#">
+       <h4>Про проект</h4>
+     </a>
+
+     <a class="control" href="#">
+       <h4>Контакти</h4>
+     </a>
+
+   </span>
+
+    <div class="searchbox-wrapper">
+      <input type="search" placeholder="Пошук за сайтом"/>
+      <img src="/assets/images/searchbox.svg"/>
+    </div>
+
+    <span>
+
+      <span class="language-selector-wrapper" onclick=switchLanguageSelector()>
+        <img src="/assets/images/languages/uk-ua.png" class="language-shield"/>
+
+      <div class="hidden">
+        <img src="/assets/images/languages/uk-ua.png"/>
+        <img src="/assets/images/languages/en-us.png"/>
+        <img src="/assets/images/languages/de-de.png"/>
+      </div>
+
+      </span>
+
+
+      <span class="cart-wrapper">
+        <img src="/assets/images/cart.svg"/>
+        <img src="/assets/images/new_notif.svg">
+      </span>
+
+      <span class="signin-wrapper" onclick=switchLoginWindow()>
+        <img src="/assets/images/signin.svg"/>
+        <h4 class="signin">Вхід</h4>
+
+        <div class="signin-menu">
+
+          <h2>Вхід</h2>
+
+          <div>
+
+            <div class="check-input valid">
+              <h5>Email</h5>
+              <div>
+                <input type="email"/>
+                <img />
+              </div>
+              <h5>pauoifhsphsofpauhsif pauofhpauohf pausofh pauhofsp ahsofupauofhpafp sdufhpsuf spudfhspifud paufh paiuo</h5>
+            </div>
+
+            <div class="check-input invalid">
+              <h5>Пароль</h5>
+              <div>
+                <input type="password"/>
+                <img />
+              </div>
+              <h5>pauoifhsphsofpauhsif pauofhpauohf pausofh pauhofsp ahsofupauofhpafp sdufhpsuf spudfhspifud paufh paiuo</h5>
+            </div>
+
+            <div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox"/>
+                <h4>Запам'ятати</h4>
+              </div>
+
+              <a href="#" class="link-wrapper-small">Відновити пароль</a>
+            </div>
+
+          </div>
+
+          <button>
+            <img src="/assets/images/signin_white.svg"/>
+            Вхід
+          </button>
+
+          <span>
+            <h5 class="lowtext">Нема акаунту?</h5>
+            <a href="#" class="link-wrapper-small">Створи тут!</a>
+          </span>
+
+        </div>
+
+      </span>
+
+    </span>
+
+      <button>
+      Реєстрація
+      </button>
+
+  </span>
+
+</header>
+</body>
+</html>
