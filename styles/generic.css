@@ -36,7 +36,7 @@ h2{
     font-size: 32px;
 }
 
-h5.lowtext{
+.lowtext{
     font-size: 12px;
     font-weight: 400;
     color: #b2b2b2;
@@ -47,7 +47,12 @@ span{
     align-items: center;
 }
 
+li:has(.control){
+    position: relative;
+}
+
 .control{
+    position: relative;
     font-weight: 600;
     color: #333333;
     font-size: 14px;
@@ -59,10 +64,9 @@ span{
 
 .control.active{
     color: #0f8040;
-    position: relative;
 }
 
-.control.active::before{
+li:has(>.control.active)::before{
     content: "";
     position: absolute;
     height: 2px;
@@ -76,6 +80,20 @@ span{
 div.searchbox-wrapper{
     height: 3rem;
     position: relative;
+    display: flex;
+}
+
+div.searchbox-wrapper > button{
+    position: absolute;
+    left: 0.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.25rem;
+    aspect-ratio: 1/1;
+    background-image: url("/assets/images/searchbox.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 div.searchbox-wrapper > img{
@@ -87,7 +105,7 @@ div.searchbox-wrapper > img{
 
 div.searchbox-wrapper > input{
     height: 100%;
-    padding: 1rem 0 0.75rem calc(0.875rem + 18px + 0.75rem);
+    padding: 1rem 0 0.75rem calc(0.875rem + 1.25rem + 0.75rem);
     border-radius: 10px;
     border: 1px solid #e6e6e6;
     color: #b2b2b2;
@@ -102,17 +120,23 @@ div.searchbox-wrapper > input:focus{
     color: #0f8040;
 }
 
-div.searchbox-wrapper > input:focus + img{
-    content: url("/assets/images/searchbox_focus.svg");
+div.searchbox-wrapper > input:focus + button{
+    background-image: url("/assets/images/searchbox_focus.svg");
 }
 
 div.check-input{
     position: relative;
 }
 
-div.check-input > h5{
+div.check-input > span{
     font-weight: 400;
     font-size: 11px;
+    color: #b2b2b2;
+}
+
+div.check-input > span:has(+ div > input){
+    color: #333333;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -160,11 +184,11 @@ div.check-input.valid > div > input{
     color: #333333;
 }
 
-div.check-input.invalid > div + h5{
+div.check-input.invalid > div + span{
     color: #e93e3e;
 }
 
-div.check-input > div + h5{
+div.check-input > div + span{
     color: #b2b2b2;
     max-width: 100%;
     margin-top: 0.5rem;
@@ -174,6 +198,11 @@ div.check-input > div + h5{
     position: relative;
     display: flex;
     align-content: center;
+    cursor: pointer;
+
+    font-weight: 500;
+    font-size: 14px;
+    align-items: center;
 }
 
 .checkbox-wrapper:after{
@@ -200,17 +229,14 @@ div.check-input > div + h5{
     height: 1rem;
 }
 
-.checkbox-wrapper:has(>input:checked) > img{
-}
-
 .checkbox-wrapper > input{
-    margin: 0;
     cursor: pointer;
-    z-index: 20;
+    z-index: -20;
     opacity: 0;
     height: 1rem;
     width: 1rem;
     padding: 0.125rem;
+    margin: 0 0.5rem 0 0;
 }
 
 .checkbox-wrapper > img{
@@ -219,13 +245,6 @@ div.check-input > div + h5{
     top: 25%;
     left: -25%;
     user-select: none;
-}
-
-.checkbox-wrapper > h4{
-    font-weight: 500;
-    font-size: 14px;
-    margin-left: 0.5rem;
-    align-self: center;
 }
 
 .hidden{

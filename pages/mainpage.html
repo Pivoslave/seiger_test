@@ -9,27 +9,26 @@
         <header>
             <span>
                 <img src="/assets/images/logo.svg" class="logo-image">
-                <span>
-                    <a class="image-text-wrapper control" href="#">
-                        <img src="../assets/images/sections_icon.svg">
-                        <h4>Розділи</h4>
-                    </a>
-                    <a class="control" href="#">
-                        <h4>Бібліотека</h4>
-                    </a>
-                    <a class="control active" href="#">
-                        <h4>Відеоблог</h4>
-                    </a>
-                    <a class="control" href="#">
-                        <h4>Про проект</h4>
-                    </a>
-                    <a class="control" href="#">
-                        <h4>Контакти</h4>
-                    </a>
-                </span>
+                <nav><ul class="navlinks-wrapper">
+                    <li><a class="image-text-wrapper control" href="#">
+                        Розділи
+                    </a></li>
+                    <li><a class="control" href="#">
+                        Бібліотека
+                    </a></li>
+                    <li><a class="control active" href="#">
+                        Відеоблог
+                    </a></li>
+                    <li><a class="control" href="#">
+                        Про проект
+                    </a></li>
+                    <li><a class="control" href="#">
+                        Контакти
+                    </a></li>
+                </ul></nav>
                 <div class="searchbox-wrapper">
                     <input type="search" placeholder="Пошук за сайтом"/>
-                    <img src="/assets/images/searchbox.svg"/>
+                    <button type="submit"></button>
                 </div>
                 <span>
                     <span class="language-selector-wrapper" onclick=switchLanguageSelector()>
@@ -44,48 +43,50 @@
                         <img src="/assets/images/cart.svg"/>
                         <img src="/assets/images/new_notif.svg">
                     </span>
-                    <span class="signin-wrapper" onclick=switchLoginWindow()>
-                        <img src="/assets/images/signin.svg"/>
-                        <h4 class="signin">Вхід</h4>
-                        <div class="signin-menu">
+                    <span class="signin-wrapper">
+                        
+                        <div class="signin">
+                            Вхід
+                        </div>
+                        <div class="signin-menu hidden">
                             <h2>Вхід</h2>
                             <div>
                                 <div class="check-input valid">
-                                    <h5>Email</h5>
+                                    <span>Email</span>
                                     <div>
                                         <input type="email"/>
                                         <img />
                                     </div>
-                                    <h5>pauoifhsphsofpauhsif pauofhpauohf pausofh pauhofsp ahsofupauofhpafp sdufhpsuf spudfhspifud paufh paiuo</h5>
+                                    <span>pauoifhsphsofpauhsif pauofhpauohf pausofh pauhofsp ahsofupauofhpafp sdufhpsuf spudfhspifud paufh paiuo</span>
                                 </div>
                                 <div class="check-input invalid">
-                                    <h5>Пароль</h5>
+                                    <span>Пароль</span>
                                     <div>
                                         <input type="password"/>
                                         <img />
                                     </div>
-                                    <h5>pauoifhsphsofpauhsif pauofhpauohf pausofh pauhofsp ahsofupauofhpafp sdufhpsuf spudfhspifud paufh paiuo</h5>
+                                    <span>pauoifhsphsofpauhsif pauofhpauohf pausofh pauhofsp ahsofupauofhpafp sdufhpsuf spudfhspifud paufh paiuo</span>
                                 </div>
                                 <div>
                                     <div class="checkbox-wrapper">
                                         <input type="checkbox"/>
-                                        <h4>Запам'ятати</h4>
+                                        Запам'ятати
                                     </div>
                                     <a href="#" class="link-wrapper-small">Відновити пароль</a>
                                 </div>
                             </div>
-                            <button>
+                            <button type="submit">
                                 <img src="/assets/images/signin_white.svg"/>
                                 Вхід
                             </button>
                             <span>
-                                <h5 class="lowtext">Нема акаунту?</h5>
+                                <span class="lowtext">Нема акаунту?</span>
                                 <a href="#" class="link-wrapper-small">Створи тут!</a>
                             </span>
                         </div>
                     </span>
                 </span>
-                <button>
+                <button type="submit">
                     Реєстрація
                 </button>
             </span>

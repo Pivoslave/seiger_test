@@ -6,6 +6,8 @@ header{
 
 header > span{
     height: 100%;
+    display: flex;
+    justify-items: center;
 }
 
 a.image-text-wrapper{
@@ -13,12 +15,25 @@ a.image-text-wrapper{
     align-items: center;
 }
 
-a.image-text-wrapper > h4{
-    margin-left: 0.5rem;
+a.image-text-wrapper:before{
+    content: url("/assets/images/sections_icon.svg");
+    align-content: center;
+    margin-right: 0.5rem;
+}
+
+.navlinks-wrapper{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navlinks-wrapper > li + li{
+    margin-left: 2rem;
+
 }
 
 .logo-image{
-    margin-right: 10.5rem;
+    margin-right: 10rem;
 }
 
 header > span > img + span > a ~ a{
@@ -49,20 +64,19 @@ span.language-selector-wrapper > div{
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
-    box-shadow: 0 -0.5rem 20px #b2b2b2;
+    box-shadow: 0 11px 46px rgba(0, 0, 0, 0.2);
 }
 
 span.language-selector-wrapper > div:before{
     content: "";
     position: absolute;
     height: 0.5rem;
-    width: calc(30% - 2rem);
-    transform: rotate(180deg) translateX(50%);
     top: -1rem;
     left: 50%;
-    border-left: 0.5rem solid transparent;
-    border-right: solid 0.5rem transparent;
-    border-top: 1.5rem solid white;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 0 9px 8px 9px;
+    border-color: transparent transparent #FFFFFF transparent;
 }
 
 span.language-selector-wrapper > div img{
@@ -118,9 +132,21 @@ span.cart-wrapper + span:has(.signin-menu.hidden):before{
     display: none;
 }
 
-h4.signin{
+.signin{
     color: #0f8040;
-    margin-left: 0.5rem;
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    align-items: center;
+    position: relative;
+}
+
+.signin:before{
+    content: url("/assets/images/signin.svg");
+    align-content: center;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    display: flex;
 }
 
 .signin-menu{
