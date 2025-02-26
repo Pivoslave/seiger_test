@@ -5,7 +5,7 @@ document.querySelector("header div.checkbox-wrapper").
     addEventListener("click", () => emulateCheckboxClick())
 
 function switchLanguageSelector(){
-    let selector = document.querySelector("span.language-selector-wrapper > div");
+    let selector = document.querySelector(".language-selector-wrapper > div");
     if(selector) selector.classList.toggle('hidden');
 }
 

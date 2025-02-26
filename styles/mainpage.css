@@ -49,11 +49,11 @@ header > span > div.searchbox-wrapper + span > * + *{
     margin-left: 2rem;
 }
 
-span.language-selector-wrapper{
+.language-selector-wrapper{
     position: relative;
 }
 
-span.language-selector-wrapper > div{
+.language-selector-wrapper > div{
     position: absolute;
     z-index: 10;
     display: flex;
@@ -67,7 +67,7 @@ span.language-selector-wrapper > div{
     box-shadow: 0 11px 46px rgba(0, 0, 0, 0.2);
 }
 
-span.language-selector-wrapper > div:before{
+.language-selector-wrapper > div:before{
     content: "";
     position: absolute;
     height: 0.5rem;
@@ -79,12 +79,12 @@ span.language-selector-wrapper > div:before{
     border-color: transparent transparent #FFFFFF transparent;
 }
 
-span.language-selector-wrapper > div img{
+.language-selector-wrapper > div img{
     border-radius: 50%;
     cursor: pointer;
 }
 
-span.language-selector-wrapper > div img+img{
+.language-selector-wrapper > div img+img{
     margin-left: 1rem;
 }
 
@@ -104,13 +104,13 @@ span.cart-wrapper > img + img{
     right: 0;
 }
 
-span.cart-wrapper + span{
+.signin-wrapper{
     cursor: pointer;
     user-select: none;
     position: relative;
 }
 
-span.cart-wrapper + span:before{
+.signin-wrapper:before{
     position: absolute;
     width: 10%;
     left: 50%;
@@ -128,7 +128,7 @@ span.cart-wrapper + span:before{
     z-index: 30;
 }
 
-span.cart-wrapper + span:has(.signin-menu.hidden):before{
+.signin-wrapper:has(.signin-menu.hidden):before{
     display: none;
 }
 
