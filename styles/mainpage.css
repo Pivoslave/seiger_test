@@ -17,7 +17,7 @@ a.image-text-wrapper > h4{
     margin-left: 0.5rem;
 }
 
-header > span > img{
+.logo-image{
     margin-right: 10.5rem;
 }
 
@@ -102,14 +102,16 @@ span.cart-wrapper + span:before{
     left: 50%;
     height: 0.5rem;
     top: calc(100% + 0.75rem);
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-bottom: 10px solid white;
+    border-style: solid;
+    border-width: 0 14px 8px 14px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: white;
+    border-left-color: transparent;
     bottom: 50%;
     transform: translateY(-50%) translateX(-50%);
     content: "";
     z-index: 30;
-    filter: drop-shadow(0 -3px 10px #333333);
 }
 
 span.cart-wrapper + span:has(.signin-menu.hidden):before{
@@ -133,7 +135,7 @@ h4.signin{
     display: flex;
     flex-flow: column nowrap;
     background-color: white;
-    box-shadow: 0 -3px 20px #333333;
+    box-shadow: 0 11px 46px rgba(0, 0, 0, 0.2);
 }
 
 
