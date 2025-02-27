@@ -77,13 +77,13 @@ li:has(>.control.active)::before{
     cursor: initial;
 }
 
-div.searchbox-wrapper{
+.searchbox-wrapper{
     height: 3rem;
     position: relative;
     display: flex;
 }
 
-div.searchbox-wrapper > button{
+.searchbox-wrapper > button{
     position: absolute;
     left: 0.875rem;
     top: 50%;
@@ -96,14 +96,14 @@ div.searchbox-wrapper > button{
     background-position: center;
 }
 
-div.searchbox-wrapper > img{
+.searchbox-wrapper > img{
     position: absolute;
     left: 0.875rem;
     top: 1rem;
     user-select: none;
 }
 
-div.searchbox-wrapper > input{
+.searchbox-wrapper > input{
     height: 100%;
     padding: 1rem 0 0.75rem calc(0.875rem + 1.25rem + 0.75rem);
     border-radius: 10px;
@@ -114,13 +114,13 @@ div.searchbox-wrapper > input{
     user-select: none;
 }
 
-div.searchbox-wrapper > input:focus{
+.searchbox-wrapper > input:focus{
     outline: none;
     border-color: #0f8040;
     color: #0f8040;
 }
 
-div.searchbox-wrapper > input:focus + button{
+.searchbox-wrapper > input:focus + button{
     background-image: url("/assets/images/searchbox_focus.svg");
 }
 
@@ -267,4 +267,14 @@ button{
 
 button:hover{
     background-color: #0d8f45;
+}
+
+@media (max-width: 1280px) {
+    .control{
+        white-space: nowrap;
+    }
+
+    button{
+        padding: 1.25rem 0;
+    }
 }

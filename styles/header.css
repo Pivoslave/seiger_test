@@ -28,8 +28,7 @@ a.image-text-wrapper:before{
 }
 
 .navlinks-wrapper > li + li{
-    margin-left: 2rem;
-
+    margin-left: 1.5rem;
 }
 
 .logo-image{
@@ -45,7 +44,12 @@ header > span > div.searchbox-wrapper{
     margin-right: 2rem;
 }
 
-header > span > div.searchbox-wrapper + span > * + *{
+.buttons-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.buttons-wrapper > * + *{
     margin-left: 2rem;
 }
 
@@ -196,4 +200,42 @@ header div.signin-menu > button + span{
     max-width: 100%;
     justify-content: center;
     column-gap: 0.125rem;
+}
+
+.laptop-search{
+    display: none;
+}
+
+
+
+@media (max-width: 1280px) {
+    header{
+        padding: 2rem 4.75rem;
+    }
+
+    .logo-image{
+        margin-right: 4rem;
+        max-height: 2.75rem;
+    }
+
+    .searchbox-wrapper{
+        display: none;
+    }
+
+    .laptop-search{
+        display: initial;
+    }
+
+    .buttons-wrapper{
+        margin-left: 2rem;
+    }
+
+    .buttons-wrapper > * + *{
+        margin-left: 1rem;
+    }
+
+    header > span > button{
+        width: 10.5rem;
+        max-width: 10rem;
+    }
 }
