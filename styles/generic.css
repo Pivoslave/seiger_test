@@ -45,6 +45,7 @@ h2{
 span{
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 li:has(.control){
@@ -56,6 +57,7 @@ li:has(.control){
     font-weight: 600;
     color: #333333;
     font-size: 14px;
+    white-space: nowrap;
 }
 
 .control:hover{
@@ -81,6 +83,7 @@ li:has(>.control.active)::before{
     height: 3rem;
     position: relative;
     display: flex;
+    width: 26.5rem;
 }
 
 .searchbox-wrapper > button{
@@ -110,7 +113,7 @@ li:has(>.control.active)::before{
     border: 1px solid #e6e6e6;
     color: #b2b2b2;
     font-weight: 400;
-    width: 26.5rem;
+    width: 100%;
     user-select: none;
 }
 
@@ -270,11 +273,12 @@ button:hover{
 }
 
 @media (max-width: 1280px) {
-    .control{
-        white-space: nowrap;
-    }
 
     button{
         padding: 1.25rem 0;
+    }
+
+    .searchbox-wrapper > button{
+        padding: 0;
     }
 }

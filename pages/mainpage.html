@@ -2,12 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Main Page</title>
         <link rel="stylesheet" href="../styles.css">
     </head>
     <body>
         <header>
             <span>
+                <button class="burger-wrapper">
+                    <img src="/assets/images/burger.svg">
+                </button>
                 <img src="/assets/images/logo.svg" class="logo-image">
                 <nav><ul class="navlinks-wrapper">
                     <li><a class="image-text-wrapper control" href="#">
@@ -39,8 +43,14 @@
                             <img src="/assets/images/languages/de-de.png"/>
                         </div>
                     </div>
+                    
                     <span class="cart-wrapper">
                         <img src="/assets/images/cart.svg"/>
+                        <img src="/assets/images/new_notif.svg">
+                    </span>
+                    
+                    <span class="notifications-wrapper">
+                        <img src="/assets/images/notification.svg">
                         <img src="/assets/images/new_notif.svg">
                     </span>
                     
@@ -94,9 +104,17 @@
                 <button type="submit">
                     Реєстрація
                 </button>
+                <div class="login-info-wrapper active">
+                    <img src="/assets/images/test-login-pic.png"/>
+                    aeroboy123
+                    <button>
+                        <img src="/assets/images/login-more-options.svg"/>
+                    </button>
+                </div>
             </span>
         </header>
         
         <script src="../scripts.js"></script>
+    
     </body>
 </html>
