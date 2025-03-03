@@ -272,6 +272,10 @@ button:hover{
     background-color: #0d8f45;
 }
 
+button:active{
+    background-color: #0f8040;
+}
+
 button.secondary{
     color: #0f8040;
     background-color: white;

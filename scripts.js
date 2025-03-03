@@ -7,6 +7,9 @@ document.querySelector("header div.checkbox-wrapper").
 document.querySelector("header .cart-wrapper").
     addEventListener("click", () => openCloseMobileCart())
 
+document.querySelector("header .cart-wrapper > .mobile-cart").
+    addEventListener("click", (e) => e.stopPropagation())
+
 function switchLanguageSelector(){
     let selector = document.querySelector(".language-selector-wrapper > div");
     if(selector) selector.classList.toggle('hidden');

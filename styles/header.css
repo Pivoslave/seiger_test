@@ -351,7 +351,7 @@ header > span > button:has(+.login-info-wrapper.active){
     .cart-wrapper.active:before{
         position: absolute;
         content: "";
-        top: 100%;
+        top: calc(100% + 0.5rem);
         right: 0;
         z-index: 20;
 
@@ -367,7 +367,7 @@ header > span > button:has(+.login-info-wrapper.active){
         position: absolute;
         width: 33rem;
         max-width: 33rem;
-        top: calc(100% + 0.5rem);
+        top: calc(100% + 1rem);
         right: 0;
         border-radius: 8px;
         box-shadow: 0 11px 46px rgba(0,0,0,0.2);
@@ -507,5 +507,19 @@ header > span > button:has(+.login-info-wrapper.active){
         margin-right: 1rem;
     }
 
+    .mobile-cart{
+        width: 28rem;
+    }
 
+    .mobile-cart > .items-wrapper{
+        padding: 0 1rem;
+    }
+
+    .mobile-cart > .items-wrapper .item{
+        padding: 1rem 0;
+    }
+
+    .mobile-cart .item + .item{
+        padding: calc(1rem + 1px) 0;
+    }
 }
