@@ -348,13 +348,29 @@ header > span > button:has(+.login-info-wrapper.active){
         display: initial;
     }
 
+    .cart-wrapper.active:before{
+        position: absolute;
+        content: "";
+        top: 100%;
+        right: 0;
+        z-index: 20;
+
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 9px 8px 9px;
+        border-color: transparent transparent #ffffff transparent;
+        transform: rotate(0deg);
+    }
+
     .mobile-cart{
-        border: 1px solid black;
         position: absolute;
         width: 33rem;
         max-width: 33rem;
-        top: 100%;
+        top: calc(100% + 0.5rem);
         right: 0;
+        border-radius: 8px;
+        box-shadow: 0 11px 46px rgba(0,0,0,0.2);
     }
 
     .mobile-cart > .items-wrapper{
@@ -364,7 +380,7 @@ header > span > button:has(+.login-info-wrapper.active){
 
     .mobile-cart >.items-wrapper .item{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         padding: 1.5rem 0;
         position: relative;
         justify-content: space-between;
@@ -377,11 +393,14 @@ header > span > button:has(+.login-info-wrapper.active){
     .mobile-cart .item > div{
         display: flex;
         flex-wrap: nowrap;
+        width: calc(100% - 0.875rem);
     }
 
     .mobile-cart .item img{
         margin-right: 0.5rem;
         border-radius: 10px;
+        width: 6rem;
+        object-fit: scale-down;
     }
 
     .mobile-cart .item > div > div{
@@ -395,11 +414,15 @@ header > span > button:has(+.login-info-wrapper.active){
     }
 
     .mobile-cart .item > div > div > span + span{
-        margin-top: 1.125rem;
+        margin-top: 1rem;
     }
 
     .mobile-cart .item .price{
         font-weight: 600;
+    }
+
+    .mobile-cart .item .price.discounted{
+        color: #d65a49;
     }
 
     .mobile-cart .item .file{
@@ -408,24 +431,48 @@ header > span > button:has(+.login-info-wrapper.active){
 
     .mobile-cart .item button{
         background: none;
-        height: 100%;
+        padding: 0;
+        height: auto;
+        display: inline-block;
     }
 
     .mobile-cart .item button > img{
-        object-fit: scale-down;
+        width: 0.875rem;
+        aspect-ratio: 1/1;
+        margin-right: 0;
     }
 
     .mobile-cart .item + .item:before{
-        position: relative;
-        margin-bottom: 1.5rem;
+        position: absolute;
         height: 1px;
+        top: 0;
         width: 100%;
         content: "";
         background-color: #f0f0f0;
     }
 
     .mobile-cart .item + .item{
-        padding-top: 0;
+        padding-top: calc(1.5rem + 1px);
+    }
+
+    .mobile-cart .order-controls{
+        background-color: #fafafa;
+        padding: 1.5rem;
+    }
+
+    .mobile-cart .order-controls > span{
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .mobile-cart .order-controls > span + span > button{
+        font-size: 14px;
+        width: calc(50% - 0.75rem);
+        flex-grow: 0;
+        padding: 1.125rem 0;
+        margin-top: 1.5rem;
     }
 }
 
