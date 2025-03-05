@@ -320,6 +320,10 @@ header > span > button:has(+.login-info-wrapper.active){
     display: initial;
 }
 
+.mobile-menu-wrapper{
+    display: none;
+}
+
 @media (max-width: 1280px) {
     header{
         padding: 2rem 4.75rem;
