@@ -100,6 +100,12 @@ li:has(>.control.active)::before{
     background-position: center;
 }
 
+.searchbox-wrapper > button:hover,
+.searchbox-wrapper > button:active,
+.searchbox-wrapper > button:focus {
+    background-color: transparent;
+}
+
 .searchbox-wrapper > img{
     position: absolute;
     left: 0.875rem;

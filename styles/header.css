@@ -314,6 +314,7 @@ header > span > button:has(+.login-info-wrapper.active){
     padding: 7px;
     top: 50%;
     transform: translateY(-50%);
+    aspect-ratio: 1/1;
 }
 
 .chapter > a > .notification.active{
@@ -724,5 +725,33 @@ header > span > button:has(+.login-info-wrapper.active){
 
     .mobile-cart .item + .item{
         padding: calc(1rem + 1px) 0;
+    }
+
+    .mobile-menu{
+        width: 21.75rem;
+    }
+
+    .mobile-menu > :not(.mobile-delimiter){
+        padding: 0 1rem;
+    }
+
+    .mobile-menu > .close-logo-wrapper > button{
+        margin-right: 1rem;
+    }
+
+    .mobile-menu .searchbox-wrapper{
+        display: initial;
+        margin-top: 2rem;
+        margin-left: 0;
+        width: calc(100% - 2rem);
+    }
+
+    .searchbox-wrapper > input{
+        padding: 1rem 0 1rem calc(0.875rem + 0.75rem + 18px);
+        width: 100%;
+    }
+
+    .searchbox-wrapper > button{
+        left: 1.875rem;
     }
 }
