@@ -202,7 +202,7 @@ img.language-shield{
 }
 
 
-header > span > button{
+header > span > a.button-styled-link{
     margin-left: 2rem;
     width: 11rem;
     max-width: 11rem;
@@ -355,7 +355,7 @@ header > span > button:has(+.login-info-wrapper.active){
         margin-left: 1rem;
     }
 
-    header > span > button{
+    header > span > a.button-styled-link{
         width: 10.5rem;
         max-width: 10rem;
     }
@@ -387,7 +387,7 @@ header > span > button:has(+.login-info-wrapper.active){
         margin-left: 1.25rem;
     }
 
-    header > span > button{
+    header > span > a.button-styled-link{
         display: none;
     }
 
@@ -642,6 +642,7 @@ header > span > button:has(+.login-info-wrapper.active){
         font-size: 14px;
         font-weight: 400;
         color: #0f8040;
+        cursor: pointer;
     }
 
     .mobile-language-selector .selected-option, .mobile-language-selector .option{
@@ -678,6 +679,8 @@ header > span > button:has(+.login-info-wrapper.active){
     .mobile-language-selector.active .option{
         display: flex;
     }
+
+    .mobile-menu .searchbox-wrapper{ display: none }
 }
 
 @media (max-width: 480px) {

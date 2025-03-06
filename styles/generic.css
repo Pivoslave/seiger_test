@@ -262,24 +262,27 @@ div.check-input > div + span{
 }
 
 button{
-    color: white;
-    background-color: #0f8040;
     border: none;
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    font-weight: 600;
-    border-radius: 12px;
     font-size: 14px;
     cursor: pointer;
     padding: 1rem 0;
+    border-radius: 12px;
 }
 
-button:hover{
+button.primary{
+    color: white;
+    background-color: #0f8040;
+    font-weight: 600;
+}
+
+button.primary:hover{
     background-color: #0d8f45;
 }
 
-button:active{
+button.primary:active{
     background-color: #0f8040;
 }
 
@@ -311,6 +314,7 @@ button.secondary:active{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .button-styled-link:hover{

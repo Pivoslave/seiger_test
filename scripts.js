@@ -13,6 +13,13 @@ document.querySelector("header .cart-wrapper > .mobile-cart").
 document.querySelector(".mobile-language-selector .selected-option").
     addEventListener("click", (e) => e.target.parentNode.classList.toggle("active"))
 
+document.querySelector(".mobile-menu .close-logo-wrapper > button").
+    addEventListener("click", () => openCloseMobileMenu());
+
+document.querySelector(".burger-wrapper").addEventListener(
+    "click", () => openCloseMobileMenu()
+)
+
 function switchLanguageSelector(){
     let selector = document.querySelector(".language-selector-wrapper > div");
     if(selector) selector.classList.toggle('hidden');
@@ -31,4 +38,8 @@ function emulateCheckboxClick(){
 function openCloseMobileCart(){
     let cart = document.querySelector("header .cart-wrapper")
     if(cart) cart.classList.toggle('active');
+}
+
+function openCloseMobileMenu(){
+    let menu = document.querySelector(".mobile-menu-wrapper")?.classList.toggle("active");
 }
