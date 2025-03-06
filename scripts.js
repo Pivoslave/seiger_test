@@ -10,6 +10,9 @@ document.querySelector("header .cart-wrapper").
 document.querySelector("header .cart-wrapper > .mobile-cart").
     addEventListener("click", (e) => e.stopPropagation())
 
+document.querySelector(".mobile-language-selector .selected-option").
+    addEventListener("click", (e) => e.target.parentNode.classList.toggle("active"))
+
 function switchLanguageSelector(){
     let selector = document.querySelector(".language-selector-wrapper > div");
     if(selector) selector.classList.toggle('hidden');
