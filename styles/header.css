@@ -272,7 +272,7 @@ header > span > button:has(+.login-info-wrapper.active){
     font-size: 28px;
     font-weight: 800;
     margin-bottom: 2rem;
-
+    display: inline;
 }
 
 .chapters-wrapper > .chapter{
@@ -284,9 +284,6 @@ header > span > button:has(+.login-info-wrapper.active){
     font-weight: 600;
     font-size: 14px;
     position: relative;
-}
-
-.chapters-wrapper > .chapter + .chapter{
     margin-top: 1.5rem;
 }
 
