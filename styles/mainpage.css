@@ -1,8 +1,14 @@
+.grid-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #articles{
     display: grid;
-    padding: 0 4rem;
     grid-template-columns: repeat(12, 120px);
     grid-column-gap: 32px;
+    width: auto;
 }
 
 #articles .chapters-wrapper{
@@ -18,11 +24,11 @@
 }
 
 #articles .chapters-wrapper > span + .chapter{
-    margin-top: 4rem;
+    margin-top: calc(3.75rem - 7px);
 }
 
 #articles .chapters-wrapper > .chapter{
-    margin-top: 2rem;
+    margin-top: calc(1.5rem - 7px);
     font-size: 16px;
     font-weight: 400;
 }
@@ -171,3 +177,112 @@
     visibility: hidden;
 }
 
+.mobile-chapter-opener{
+    display: none;
+}
+
+@media(max-width: 1280px){
+    #articles{
+        grid-template-columns: repeat(12, 72px);
+        grid-column-gap: 24px;
+        padding: 0 4.75rem;
+    }
+
+    #articles .chapters-wrapper{
+        grid-column: span 4;
+    }
+
+    #articles .main-article{
+        grid-column: span 8;
+    }
+
+    #articles .main-article .middle-article > span{
+        display: none;
+    }
+
+    #articles .main-article .middle-article > h1{
+        margin-bottom: 2.5rem;
+    }
+
+    #articles .main-article .middle-article > a{
+        margin-top: 0;
+    }
+
+    .article .middle-article{
+        margin-bottom: 10.5rem;
+    }
+
+    #articles .article .top-strip{
+        margin-bottom: 10.5rem;
+    }
+
+    .article .article-footer{
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #articles{
+        grid-template-columns: repeat(4, 160px);
+        grid-column-gap: 24px;
+        padding: 0 1.75rem;
+    }
+
+    #articles .chapters-wrapper{
+        grid-row: 2;
+        grid-column: span 2;
+    }
+
+    #articles .main-article{
+        grid-column: span 4;
+    }
+
+    #articles .chapters-wrapper > span{
+        font-size: 28px;
+    }
+
+    #articles .chapters-wrapper > span + .chapter{
+        margin-top: calc(1.5rem - 7px);
+    }
+
+    #articles .chapters-wrapper{
+        padding: 2rem 0 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #articles{
+        grid-template-columns: 448px;
+        padding: 0;
+    }
+
+    #articles .main-article{
+        grid-column: span 1;
+    }
+
+    #articles .chapters-wrapper{
+        grid-column: span 1;
+        grid-row: 3;
+    }
+
+    .mobile-chapter-opener{
+        display: flex;
+        grid-row: 2;
+        margin: 1rem 0;
+    }
+
+    .mobile-chapter-opener:before{
+        content: url("../assets/images/chapter-burger.svg");
+        align-content: center;
+        margin-right: 0.5rem;
+    }
+
+    .mobile-chapter-opener:hover:before{
+        content: url("../assets/images/chapter-burger-white.svg");
+    }
+
+    :not(.mobile-chapter-opener.active) ~ .chapters-wrapper{
+        display: none;
+    }
+}

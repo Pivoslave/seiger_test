@@ -9,7 +9,7 @@
     <body>
         <header>
             
-            <aside class="mobile-menu-wrapper active">
+            <aside class="mobile-menu-wrapper">
                 <div class="mobile-menu">
                     <span class="close-logo-wrapper">
                         <button>
@@ -163,7 +163,7 @@
                         </div>
                     </div>
                     
-                    <div class="cart-wrapper active">
+                    <div class="cart-wrapper">
                         <img src="/assets/images/cart.svg"/>
                         <img src="/assets/images/new_notif.svg">
                         
@@ -295,7 +295,12 @@
             </span>
         </header>
         
-        <main id="articles">
+        <main class="grid-wrapper">
+        <div id="articles">
+            
+            <button class="secondary mobile-chapter-opener">
+                Усі розділи
+            </button>
             
             <div class="chapters-wrapper">
                 <span>Розділи</span>
@@ -380,6 +385,7 @@
                 </div>
             </div>
             
+        </div>
         </main>
         
         <script src="../scripts.js"></script>

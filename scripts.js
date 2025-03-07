@@ -20,6 +20,9 @@ document.querySelector(".burger-wrapper").addEventListener(
     "click", () => openCloseMobileMenu()
 )
 
+document.querySelector("#articles .mobile-chapter-opener").
+    addEventListener("click", (e) => e.target.classList.toggle("active"));
+
 function switchLanguageSelector(){
     let selector = document.querySelector(".language-selector-wrapper > div");
     if(selector) selector.classList.toggle('hidden');
