@@ -33,8 +33,10 @@ a.link-wrapper-small:hover:before{
 }
 
 h2{
-    font-weight: 700;
-    font-size: 32px;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: left;
+    color: white;
 }
 
 .lowtext{
@@ -365,5 +367,9 @@ h1{
 
     h1{
         font-size: 38px;
+    }
+
+    h2{
+        font-size: 22px;
     }
 }
