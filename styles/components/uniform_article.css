@@ -1,0 +1,126 @@
+.uniform-article-grid{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    grid-template-columns: repeat(12, 120px);
+    grid-column-gap: 32px;
+}
+
+.uniform-article:before{
+    content: var(--category-name);
+    position: absolute;
+    right: 0;
+    padding: 0.75rem 1.125rem;
+    border-radius: 0 8px 0 8px;
+    background-color: var(--strip-color);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.uniform-article{
+    height: auto;
+    grid-column: span 3;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.uniform-article img{
+    height: 14.25rem;
+    max-height: 14.25rem;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.uniform-article .article-name{
+    padding: 2rem;
+}
+
+.uniform-article .article-preview{
+    padding: 0 2rem 2rem 2rem;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    height: auto;
+    width: fit-content;
+}
+
+.uniform-article .article-name,
+.uniform-article .article-preview,
+.uniform-article .arrow-link-wrapper{
+    background-color: #fafafa;
+}
+
+.uniform-article .arrow-link-wrapper{
+    padding: 0 2rem 3.75rem 2rem;
+}
+
+.uniform-article .uniform-stat-wrapper{
+    border-radius: 0 0 8px 8px;
+    background-color: #f5f5f5;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.uniform-stat-wrapper .uniform-stats{
+    display: flex;
+    font-size: 12px;
+    color: #0f8040;
+    align-items: center;
+}
+
+.uniform-stats span + span{
+    margin-left: 1rem;
+}
+
+.uniform-stats span:before{
+    content: var(--stat-icon);
+    margin-right: 0.5rem;
+    display: flex;
+}
+
+.uniform-article .uniform-author{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uniform-author img{
+    max-height: 1.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.uniform-author .info-wrapper span.nickname{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.uniform-author .info-wrapper span{
+    height: auto;
+    font-size: 10px;
+}
+
+.uniform-article.inverted, .uniform-article.inverted .uniform-stats{
+    color: white;
+}
+
+.uniform-article.inverted .article-name,
+.uniform-article.inverted .article-preview,
+.uniform-article.inverted .arrow-link-wrapper{
+    background-color: #0f8040;
+}
+
+.uniform-article.inverted .uniform-stat-wrapper{
+    background-color: #0d783b;
+}
+
+.uniform-article.inverted .uniform-stats span:before{
+    content: var(--stat-icon-inverted);
+}
