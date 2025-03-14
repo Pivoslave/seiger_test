@@ -261,6 +261,22 @@
     padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
+.load-more{
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+}
+
+.load-more:before{
+    content: url("../assets/images/loadmore.svg");
+    margin-right: 0.5rem;
+    display: flex;
+}
+
+.load-more:hover:before{
+    content: url("../assets/images/loadmore-white.svg");
+}
+
+
 @media(max-width: 1280px){
     #articles{
         grid-template-columns: repeat(12, 72px);
@@ -331,6 +347,10 @@
         justify-content: space-between;
         display: flex;
         width: 100%;
+    }
+
+    .load-more{
+        padding: 1rem 2.25rem;
     }
 }
 
@@ -403,6 +423,10 @@
     #articles .tablet-last{
         order: 3;
     }
+
+    .load-more{
+        padding: 1rem 3.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -460,5 +484,9 @@
 
     .long-article .article-footer{
         display: none;
+    }
+
+    .load-more{
+        width: 28rem;
     }
 }
