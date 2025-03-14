@@ -17,6 +17,7 @@
     color: white;
     font-size: 12px;
     font-weight: 500;
+    z-index: 1;
 }
 
 .uniform-article{
@@ -25,6 +26,12 @@
     position: relative;
     display: flex;
     flex-flow: column;
+}
+
+.uniform-article > div{
+    display: flex;
+    flex-flow: column;
+    position: relative;
 }
 
 .uniform-article img{
@@ -123,4 +130,130 @@
 
 .uniform-article.inverted .uniform-stats span:before{
     content: var(--stat-icon-inverted);
+}
+
+.uniform-article.uniform-ad img{
+    height: fit-content;
+    max-height: initial;
+    border-radius: 8px;
+}
+
+.uniform-article.minimal .article-preview,
+.uniform-article.minimal .uniform-stat-wrapper
+{
+    display: none;
+}
+
+.uniform-article.minimal h3{
+    border-radius: 0 0 8px 8px;
+}
+
+.uniform-article.minimal .arrow-link-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: none;
+}
+
+.uniform-article.minimal .arrow-link-wrapper a {
+    width: 100%;
+    position: absolute;
+    padding-bottom: 0;
+    height: calc(100% - 0.25rem);
+    color: transparent;
+    z-index: 2;
+}
+
+.uniform-article.minimal .arrow-link-wrapper a:after,
+.uniform-article.minimal .arrow-link-wrapper a:before{
+    display: none;
+}
+
+@media (max-width: 1280px) {
+    .uniform-article-grid{
+        grid-template-columns: repeat(12, 72px);
+        grid-column-gap: 24px;
+    }
+
+    .uniform-article{
+        grid-column: span 4;
+    }
+
+    .uniform-article .article-name{
+        padding: 1.5rem;
+    }
+
+    .uniform-article .article-preview{
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .uniform-article .arrow-link-wrapper{
+        padding: 0 1.5rem 3.75rem 1.5rem;
+    }
+
+    .uniform-stat-wrapper{
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .uniform-article-grid{
+        grid-template-columns: repeat(4, 160px);
+        grid-column-gap: 24px;
+    }
+
+    .uniform-article{
+        grid-column: span 2;
+    }
+
+    .uniform-article .article-preview,
+    .uniform-article .uniform-stat-wrapper
+    {
+        display: none;
+    }
+
+    .uniform-article .arrow-link-wrapper,
+    .uniform-article.inverted .arrow-link-wrapper {
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .uniform-article .arrow-link-wrapper a{
+        color: transparent;
+        padding: 0;
+        width: 100%;
+        height: calc(100% - 0.25rem);
+        display: block;
+        z-index: 2;
+    }
+
+    .uniform-article .article-name{
+        border-radius: 0 0 8px 8px;
+    }
+
+    .uniform-article .arrow-link-wrapper a:before,
+    .uniform-article .arrow-link-wrapper a:after{
+        display: none;
+    }
+
+    .uniform-article.uniform-ad img{
+        max-height: 29.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .uniform-article-grid{
+        grid-template-columns: 448px;
+    }
+
+    .uniform-article{
+        grid-column: span 1;
+    }
 }
