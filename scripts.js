@@ -24,6 +24,10 @@ window.addEventListener("load", () =>{
     articlesGridHeightNormalizer();
 })
 
+window.addEventListener("resize", () => {
+    articlesGridHeightNormalizer();
+})
+
 document.querySelector("#articles .mobile-chapter-opener").
     addEventListener("click", (e) => e.target.classList.toggle("active"));
 
@@ -55,11 +59,13 @@ function articlesGridHeightNormalizer(){
     let gridRows = 0;
     let gap = 0;
     switch (true){
-        case (window.innerWidth <= 1920 && window.innerWidth > 1280): gridRows = 4; gap = 32; break;
+        case (window.innerWidth > 1280): gridRows = 4; gap = 32; break;
         case(window.innerWidth <= 1280 && window.innerWidth > 768): gridRows = 3; gap = 24; break;
         case(window.innerWidth <= 768 && window.innerWidth > 480): gridRows = 2; gap = 24; break;
         default: gridRows = 1; gap = 16; break;
     }
+
+    console.log(window.innerWidth, gridRows, gap);
 
     if(gridRows === 0 || document.querySelectorAll(".uniform-article-grid .uniform-article")?.length <= gridRows)
         return;
@@ -67,6 +73,7 @@ function articlesGridHeightNormalizer(){
     let articles = document.querySelectorAll(".uniform-article");
 
     for(let i = gridRows; i <= articles.length-1; i++){
+        articles[i].style.marginTop = ``;
         let prevEndPoint = articles[i-gridRows].children[0].getBoundingClientRect().bottom;
         let topDiff = prevEndPoint - articles[i].getBoundingClientRect().top + gap;
         articles[i].style.marginTop = `${topDiff}px`;
