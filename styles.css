@@ -2,6 +2,7 @@
 @import "styles/header.css";
 @import "styles/mainpage.css";
 @import "styles/components/uniform_article.css";
+@import "styles/components/footer.css";
 
 @font-face {
     font-family: "Montserrat", sans-serif;
@@ -64,3 +65,9 @@
     src: url("/assets/fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Monserrat", sans-serif;
+    font-weight: 400;
+    src: url("/assets/fonts/Montserrat/Montserrat-Italic.ttf");
+    font-style: italic;
+}

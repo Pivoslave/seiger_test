@@ -1,0 +1,182 @@
+footer{
+    background-color: #333333;
+    position: relative;
+    height: 20rem;
+}
+
+.hide-show{
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    background-image: url("../../assets/images/arrow-right-white.svg");
+    transform: translateY(-50%) rotate(-90deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0f8040;
+    height: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+footer .upper{
+    display: flex;
+    padding: 2.325rem 4rem 0 4rem;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.upper .upper-left{
+    display: flex;
+}
+
+.links ul{
+    padding-left: 0;
+    margin: 0;
+}
+
+.links > ul li+li{
+    margin-top: 1.25rem;
+}
+
+.links a{
+    color: #b2b2b2;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.links .image-links{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.image-links > a + a{
+    margin-left: 1rem;
+}
+
+.upper-left .categories{
+    display: flex;
+    margin-left: 10.75rem;
+}
+
+.category-column span{
+    height: auto;
+    color: #b2b2b2;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.category-column + .category-column{
+    margin-left: 4rem;
+}
+
+.category-column span:before{
+    content: "";
+    height: 0.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--category-color);
+    margin-right: 0.5rem;
+}
+
+.category-column a + a{
+    margin-top: 1.25rem;
+    display: block;
+}
+
+.upper .upper-right{
+    width: 26.4375rem;
+    color: white;
+}
+
+.upper-right .newsletter-main{
+    font-size: 24px;
+    font-weight: 600;
+    height: auto;
+}
+
+.upper-right .newsletter-secondary{
+    font-size: 16px;
+    font-weight: 400;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+.newsletter-form{
+    margin-top: 2rem;
+    position: relative;
+    max-width: 100%;
+}
+
+.newsletter-form input[type = "email"]{
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1.25rem 10rem 1.25rem 1rem;
+    background-color: #3b3b3b;
+    border: solid 1px #4d4d4d;
+    color: #b2b2b2;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.newsletter-form input[type = "submit"]{
+    position: absolute;
+    right: 0;
+    width: 10rem;
+    max-width: 10rem;
+    height: 100%;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #0f8040;
+    cursor: pointer;
+}
+
+.lower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: #333333;
+    position: relative;
+    color: #b2b2b2;
+}
+
+.lower:before{
+    display: block;
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #474747;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.lower .copyright{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.lower > div span{
+    color: #b2b2b2;
+    font-size: 12px;
+    height: auto;
+}
+
+.design-credits:after{
+    content: url("../../assets/images/footer/morkva.png");
+    margin-left: 0.5rem;
+}
+
+.design-credits{
+    margin-bottom: 0.5rem;
+}
+
+.dev-credits.underscored{
+    margin-left: 0.25rem;
+    text-decoration: underline;
+}
