@@ -1,7 +1,6 @@
 footer{
     background-color: #333333;
     position: relative;
-    height: 20rem;
 }
 
 .hide-show{
@@ -179,4 +178,24 @@ footer .upper{
 .dev-credits.underscored{
     margin-left: 0.25rem;
     text-decoration: underline;
+}
+
+.lower .image-links{
+    display: none;
+}
+
+footer.collapsed{
+    margin-top: 6rem;
+}
+
+footer.collapsed .hide-show{
+    transform: translateY(calc(-100% - 3rem)) rotate(-90deg);
+}
+
+footer.collapsed .lower .image-links{
+    display: initial;
+}
+
+footer.collapsed .upper{
+    display: none;
 }

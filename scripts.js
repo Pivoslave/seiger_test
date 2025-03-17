@@ -31,6 +31,10 @@ window.addEventListener("resize", () => {
 document.querySelector("#articles .mobile-chapter-opener").
     addEventListener("click", (e) => e.target.classList.toggle("active"));
 
+document.querySelector("footer .hide-show").addEventListener(
+    "click", () => expandCollapseFooter()
+)
+
 function switchLanguageSelector(){
     let selector = document.querySelector(".language-selector-wrapper > div");
     if(selector) selector.classList.toggle('hidden');
@@ -78,4 +82,8 @@ function articlesGridHeightNormalizer(){
         let topDiff = prevEndPoint - articles[i].getBoundingClientRect().top + gap;
         articles[i].style.marginTop = `${topDiff}px`;
     }
+}
+
+function expandCollapseFooter(){
+    document.querySelector("footer").classList.toggle("collapsed");
 }
