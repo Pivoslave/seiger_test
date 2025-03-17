@@ -199,3 +199,53 @@ footer.collapsed .lower .image-links{
 footer.collapsed .upper{
     display: none;
 }
+
+@media (max-width: 1280px) {
+    footer .upper{
+        padding: 4rem 4.75rem 0 4.75rem;
+    }
+
+    .hide-show{
+        right: 4.75rem;
+    }
+
+    .upper-left .categories{
+        margin-left: 2.5rem;
+    }
+
+    .category-column{
+        max-width: 11.75rem;
+    }
+
+    .category-column + .category-column{
+        margin-left: 1.5rem;
+    }
+
+    .category-column a + a{
+        margin-top: 1rem;
+    }
+
+    .category-column a{
+
+    }
+
+    .category-column span{
+        overflow-wrap: break-word;
+    }
+
+    .upper .upper-right{
+        width: 22.5rem;
+    }
+
+    .upper-right .newsletter-main{
+        font-size: 22px;
+    }
+
+    .newsletter-form{
+        margin-top: 1.5rem;
+    }
+
+    .lower .copyright{
+        font-size: 12px;
+    }
+}
