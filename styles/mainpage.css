@@ -276,66 +276,7 @@
     content: url("../assets/images/loadmore-white.svg");
 }
 
-.sponsored-wrapper{
-    display: grid;
-    grid-template-columns: repeat(12, 120px);
-    grid-column-gap: 32px;
-    width: auto;
-    height: auto;
-    margin-top: 2rem;
-    border-radius: 8px;
-    position: relative;
-    margin-bottom: 4rem;
-}
 
-.sponsored-wrapper > div{
-    display: grid;
-    grid-column: span 12;
-    height: auto;
-    grid-template-columns: inherit;
-    grid-column-gap: inherit;
-    background-image: url("../assets/images/sponsored-bg.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-}
-
-.sponsored-wrapper .elements-wrapper{
-    grid-column-start: 3;
-    grid-column-end: 10;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 8rem 0;
-}
-
-.elements-wrapper > img {
-    object-fit: scale-down;
-}
-
-.elements-wrapper h2{
-    font-size: 32px;
-    margin-top: 3.5rem;
-}
-
-.elements-wrapper h3{
-    font-size: 16px;
-    color: white;
-    margin-top: 1.5rem;
-    font-weight: 400;
-}
-
-.promotion-button{
-    color: white;
-    padding: 1rem 3.25rem;
-    background-color: #1c73ff;
-    border-radius: 8px;
-    font-weight: 600;
-    margin-top: 2rem;
-    box-shadow: 0 0 29px rgba(35, 122, 255, 0.3);
-}
 
 @media(max-width: 1280px){
     #articles{
@@ -411,11 +352,6 @@
 
     .load-more{
         padding: 1rem 2.25rem;
-    }
-
-    .sponsored-wrapper{
-        grid-template-columns: repeat(12, 72px);
-        grid-column-gap: 24px;
     }
 
 }
@@ -494,33 +430,6 @@
         padding: 1rem 3.5rem;
     }
 
-    .sponsored-wrapper{
-        grid-template-columns: repeat(4, 160px);
-        grid-column-gap: 24px;
-    }
-
-    .sponsored-wrapper > div{
-        grid-column: span 4;
-    }
-
-    .sponsored-wrapper .elements-wrapper{
-        grid-column-start: 1;
-        grid-column-end: 5;
-        align-items: center;
-        padding: 4rem 5.75rem;
-    }
-
-    .elements-wrapper h2{
-        margin-top: 4.25rem;
-    }
-
-    .elements-wrapper h3{
-        margin-top: 2rem;
-    }
-
-    .elements-wrapper h3, .elements-wrapper h2{
-        text-align: center;
-    }
 }
 
 @media (max-width: 480px) {
@@ -584,14 +493,4 @@
         width: 28rem;
     }
 
-    .sponsored-wrapper{
-        grid-template-columns: 448px;
-        grid-column-gap: 0;
-    }
-
-    .sponsored-wrapper .elements-wrapper{
-        grid-column-start: 1;
-        grid-column-end: 1;
-        padding: 4rem 2.25rem;
-    }
 }
