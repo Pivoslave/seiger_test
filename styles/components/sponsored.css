@@ -1,36 +1,20 @@
 .sponsored-wrapper{
-    display: grid;
-    grid-template-columns: repeat(12, 120px);
-    grid-column-gap: 32px;
-    width: auto;
-    height: auto;
-    margin-top: 2rem;
-    border-radius: 8px;
+    display: flex;
+    max-width: 1792px;
     position: relative;
-    margin-bottom: 4rem;
-}
-
-.sponsored-wrapper > div{
-    display: grid;
-    grid-column: span 12;
-    height: auto;
-    grid-template-columns: inherit;
-    grid-column-gap: inherit;
+    margin: 4rem clamp(48px, 3.34vw, 64px) 4rem clamp(48px, 3.34vw, 64px);
     background-image: url("../../assets/images/sponsored-bg.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 8px;
 }
 
 .sponsored-wrapper .elements-wrapper{
-    grid-column-start: 3;
-    grid-column-end: 10;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: center;
-    padding: 8rem 0;
+    padding: 8rem clamp(384px, 39.58vw ,760px) 8rem clamp(97px, 15.9vw, 304px);
 }
 
 .elements-wrapper > img {
@@ -60,27 +44,27 @@
 }
 
 @media (max-width: 1280px) {
+
     .sponsored-wrapper{
-        grid-template-columns: repeat(12, 72px);
-        grid-column-gap: 24px;
+        max-width: 1128px;
+        margin-left: clamp(28px, 3.75vw, 48px);
+        margin-right: clamp(28px, 3.75vw, 48px);
+    }
+
+    .sponsored-wrapper .elements-wrapper{
+        padding: 8rem clamp(15px, 46.875vw, 300px) 8rem clamp(15px, 15.9vw, 72px);
     }
 }
 
 @media (max-width: 768px){
     .sponsored-wrapper{
-        grid-template-columns: repeat(4, 160px);
-        grid-column-gap: 24px;
-    }
-
-    .sponsored-wrapper > div{
-        grid-column: span 4;
+        margin-left: clamp(16px, 3.645vw, 28px);
+        margin-right: clamp(16px, 3.645vw, 28px);
     }
 
     .sponsored-wrapper .elements-wrapper{
-        grid-column-start: 1;
-        grid-column-end: 5;
         align-items: center;
-        padding: 4rem 5.75rem;
+        padding: 4rem clamp(16px,12.10vw, 93px);
     }
 
     .elements-wrapper h2{
