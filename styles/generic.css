@@ -4,6 +4,10 @@ body{
     font-family: Monserrat, sans-serif;
 }
 
+ul{
+    margin: 0;
+}
+
 a{
     text-decoration: none;
     user-select: none;

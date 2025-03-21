@@ -107,6 +107,7 @@
 .article .middle-article > a.button-styled-link{
     padding: 1.25rem 2rem;
     margin-top: 2rem;
+    transition-duration: 0.3s;
 }
 
 .article .middle-article > a.button-styled-link:after{

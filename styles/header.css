@@ -5,6 +5,12 @@ header{
     justify-content: center;
 }
 
+.desktop-menu{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 a.image-text-wrapper{
     display: inline-flex;
     align-items: center;
@@ -30,7 +36,7 @@ a.image-text-wrapper:before{
     margin-right: 10rem;
 }
 
-header > span > img + span > a ~ a{
+.desktop-menu > img + span > a ~ a{
     margin-left: 2rem;
 }
 
@@ -58,10 +64,10 @@ header > span > img + span > a ~ a{
     display: flex;
     top: 100%;
     margin-top: 1rem;
-    //border: solid 1px black;
     padding: 1rem;
     left: 50%;
     transform: translateX(-50%);
+    background-color: white;
     border-radius: 5px;
     box-shadow: 0 11px 46px rgba(0, 0, 0, 0.2);
 }
@@ -195,6 +201,7 @@ img.language-shield{
 
 .signin-menu > h2{
     align-self: center;
+    color: black;
 }
 
 .signin-menu > * + *{
@@ -202,7 +209,7 @@ img.language-shield{
 }
 
 
-header > span > a.button-styled-link{
+.desktop-menu > a.button-styled-link{
     margin-left: 2rem;
     width: 11rem;
     max-width: 11rem;
@@ -246,7 +253,7 @@ header div.signin-menu > button + span{
     display: flex;
 }
 
-header > span > button:has(+.login-info-wrapper.active){
+.desktop-menu > button:has(+.login-info-wrapper.active){
     display: none;
 }
 
@@ -352,7 +359,7 @@ header > span > button:has(+.login-info-wrapper.active){
         margin-left: 1rem;
     }
 
-    header > span > a.button-styled-link{
+    .desktop-menu > a.button-styled-link{
         width: 10.5rem;
         max-width: 10rem;
     }
@@ -384,7 +391,7 @@ header > span > button:has(+.login-info-wrapper.active){
         margin-left: 1.25rem;
     }
 
-    header > span > a.button-styled-link{
+    .desktop-menu > a.button-styled-link{
         display: none;
     }
 
