@@ -1,9 +1,9 @@
-@import "styles/generic.css";
-@import "styles/header.css";
-@import "styles/mainpage.css";
-@import "styles/components/uniform_article.css";
-@import "styles/components/footer.css";
-@import "styles/components/sponsored.css";
+@import "css/generic.css";
+@import "css/header.css";
+@import "css/mainpage.css";
+@import "css/components/uniform_article.css";
+@import "css/components/footer.css";
+@import "css/components/sponsored.css";
 
 @font-face {
     font-family: "Montserrat", sans-serif;

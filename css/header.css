@@ -17,7 +17,7 @@ a.image-text-wrapper{
 }
 
 a.image-text-wrapper:before{
-    content: url("/assets/images/sections_icon.svg");
+    content: url("/img/sections_icon.svg");
     align-content: center;
     margin-right: 0.5rem;
 }
@@ -171,7 +171,7 @@ img.language-shield{
 }
 
 .signin:before{
-    content: url("/assets/images/signin.svg");
+    content: url("../img/signin.svg");
     align-content: center;
     margin-right: 0.5rem;
     vertical-align: middle;
@@ -611,7 +611,7 @@ header div.signin-menu > button + span{
         margin-right: 0.5rem;
         height: 21px;
         aspect-ratio: 1/1;
-        background-image: url("/assets/images/signin.svg");
+        background-image: url("/img/signin.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -619,7 +619,7 @@ header div.signin-menu > button + span{
     }
 
     .register-login-wrapper > a + a:hover:before{
-        background-image: url("/assets/images/signin_white.svg");
+        background-image: url("/img/signin_white.svg");
     }
 
     .mobile-menu .delimiter{

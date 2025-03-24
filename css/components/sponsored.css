@@ -3,7 +3,7 @@
     max-width: 1792px;
     position: relative;
     margin: 4rem clamp(48px, 3.34vw, 64px) 4rem clamp(48px, 3.34vw, 64px);
-    background-image: url("../../assets/images/sponsored-bg.png");
+    background-image: url("../../img/sponsored-bg.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -7,7 +7,7 @@ footer{
     position: absolute;
     top: 0;
     right: 2.5rem;
-    background-image: url("../../assets/images/arrow-right-white.svg");
+    background-image: url("../../img/arrow-right-white.svg");
     transform: translateY(-50%) rotate(-90deg);
     background-repeat: no-repeat;
     background-position: center;
@@ -173,7 +173,7 @@ footer .upper{
 }
 
 .design-credits:after{
-    content: url("../../assets/images/footer/morkva.png");
+    content: url("../../img/footer/morkva.png");
     margin-left: 0.5rem;
 }
 

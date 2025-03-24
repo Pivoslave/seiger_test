@@ -6,6 +6,7 @@ body{
 
 ul{
     margin: 0;
+
 }
 
 a{
@@ -105,7 +106,7 @@ li:has(>.control.active)::before{
     transform: translateY(-50%);
     height: 1.25rem;
     aspect-ratio: 1/1;
-    background-image: url("/assets/images/searchbox.svg");
+    background-image: url("/img/searchbox.svg");
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -142,7 +143,7 @@ li:has(>.control.active)::before{
 }
 
 .searchbox-wrapper > input:focus + button{
-    background-image: url("/assets/images/searchbox_focus.svg");
+    background-image: url("/img/searchbox_focus.svg");
 }
 
 div.check-input{
@@ -173,11 +174,11 @@ div.check-input > div > img{
 }
 
 div.check-input.valid > div > img{
-    content: url("/assets/images/green_checkmark.svg");
+    content: url("/img/green_checkmark.svg");
 }
 
 div.check-input.invalid > div > img{
-    content: url("/assets/images/red_crossmark.svg");
+    content: url("/img/red_crossmark.svg");
 }
 
 div.check-input > div > input{
@@ -242,7 +243,7 @@ div.check-input > div + span{
 .checkbox-wrapper:has(>input:checked):after{
     background-color: #0f8040;
     //content: url("/assets/images/white_checkmark.svg");
-    background-image: url("/assets/images/white_checkmark.svg");
+    background-image: url("/img/white_checkmark.svg");
     background-size: revert;
     background-position: center;
     background-repeat: no-repeat;
@@ -373,7 +374,7 @@ a.arrow-link{
 }
 
 a.arrow-link:after{
-    content: url("../assets/images/arrow-right-green.svg");
+    content: url("../img/arrow-right-green.svg");
     position: absolute;
     left: calc(100% + 0.5rem);
 }
@@ -392,7 +393,7 @@ a.arrow-link.inverted{
 }
 
 a.arrow-link.inverted:after{
-    content: url("../assets/images/arrow-right-white.svg");
+    content: url("../img/arrow-right-white.svg");
 }
 
 a.arrow-link.inverted:hover:before{
