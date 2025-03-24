@@ -6,7 +6,7 @@ body{
 
 ul{
     margin: 0;
-
+    padding: 0;
 }
 
 a{
@@ -400,6 +400,12 @@ a.arrow-link.inverted:hover:before{
     background-color: white;
 }
 
+.container{
+    padding-left: clamp(48px, 3.33vw ,64px);
+    padding-right: clamp(48px, 3.33vw ,64px);
+    position: relative;
+}
+
 @media (max-width: 1280px) {
 
     button{
@@ -416,5 +422,23 @@ a.arrow-link.inverted:hover:before{
 
     h2{
         font-size: 22px;
+    }
+
+    .container{
+        padding-right: clamp(28px, 3.75vw ,48px);
+        padding-left: clamp(28px, 3.75vw ,48px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding-left: clamp(16px, 3.646vw ,28px);
+        padding-right: clamp(16px, 3.646vw ,28px);
+    }
+}
+
+@media (max-width: 480px) {
+    h1{
+        font-size: 34px;
     }
 }

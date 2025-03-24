@@ -1,12 +1,13 @@
 .sponsored-wrapper{
     display: flex;
-    max-width: 1792px;
     position: relative;
-    margin: 4rem clamp(48px, 3.34vw, 64px) 4rem clamp(48px, 3.34vw, 64px);
     background-image: url("../../img/sponsored-bg.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 8px;
 }
 
 .sponsored-wrapper .elements-wrapper{
@@ -44,24 +45,12 @@
 }
 
 @media (max-width: 1280px) {
-
-    .sponsored-wrapper{
-        max-width: 1128px;
-        margin-left: clamp(28px, 3.75vw, 48px);
-        margin-right: clamp(28px, 3.75vw, 48px);
-    }
-
     .sponsored-wrapper .elements-wrapper{
         padding: 8rem clamp(15px, 46.875vw, 300px) 8rem clamp(15px, 15.9vw, 72px);
     }
 }
 
 @media (max-width: 768px){
-    .sponsored-wrapper{
-        margin-left: clamp(16px, 3.645vw, 28px);
-        margin-right: clamp(16px, 3.645vw, 28px);
-    }
-
     .sponsored-wrapper .elements-wrapper{
         align-items: center;
         padding: 4rem clamp(16px,12.10vw, 93px);
