@@ -54,7 +54,7 @@ footer .upper{
 
 .upper-left .categories{
     display: flex;
-    margin-left: 10.75rem;
+    margin-left: clamp(2rem,8.68vw,10.75rem);
 }
 
 .category-column span{
@@ -85,6 +85,7 @@ footer .upper{
 .upper .upper-right{
     width: 26.4375rem;
     color: white;
+    margin-left: 3rem;
 }
 
 .upper-right .newsletter-main{

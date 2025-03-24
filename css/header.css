@@ -340,7 +340,7 @@ header div.signin-menu > button + span{
     }
 
     .logo-image{
-        margin-right: 4rem;
+        margin-right: clamp(0.5rem, 3vw,4rem);
         max-height: 2.75rem;
     }
 
@@ -352,8 +352,13 @@ header div.signin-menu > button + span{
         display: initial;
     }
 
+    .navlinks-wrapper > li + li{
+        margin-left: 1.87vw;
+    }
+
     .buttons-wrapper{
-        margin-left: 2rem;
+        margin-left: clamp(0.3rem, 2vw ,2rem);
+        margin-right: clamp(0.3rem, 2vw ,2rem);
     }
 
     .buttons-wrapper > * + *{

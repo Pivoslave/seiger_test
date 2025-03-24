@@ -4,6 +4,7 @@
     margin-top: 2rem;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: clamp(24px, 1.66vw ,32px);
+    overflow-x: hidden;
 }
 
 .uniform-article:before{
