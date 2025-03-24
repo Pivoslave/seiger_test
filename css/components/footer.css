@@ -275,6 +275,7 @@ footer.collapsed .upper{
         flex-direction: column;
         align-items: center;
         margin-bottom: 4rem;
+        margin-left: 0;
     }
 
     footer .upper-left{
