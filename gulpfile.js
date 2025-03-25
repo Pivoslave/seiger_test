@@ -8,14 +8,31 @@ const htmlmin = require("gulp-htmlmin");
 const newer = require("gulp-newer");
 const path = require("path");
 const browserSync = require("browser-sync").create();
+const fileInclude = require('gulp-file-include');
 
 const paths = {
     html: "src/**/*.html",
     styles: "src/css/**/*.css",
     scripts: "src/js/**/*.js",
     images: "src/img/**/*",
+    partials: "src/partials/**/*.html",
     dist: "dist/"
 };
+
+const globalVariables = {
+    views: 1269,
+    comments: 26,
+    shares: 72,
+    avatar: "img/test-login-pic.png",
+    author: "aeroboy123",
+    date: "25 бер. 2023",
+    header: "Заголовок за замовчуванням",
+    text: "Текст за замовчуванням",
+    stripcolor: "black",
+    category: "Категорія 0",
+    preview: "Текст-прев'ю за замовчуванням",
+    bg_url: "../../img/article-bgs/vitryaky.png",
+}
 
 function styles() {
     return gulp.src(paths.styles)
@@ -26,6 +43,13 @@ function styles() {
 
 function html() {
     return gulp.src(paths.html)
+        .pipe(fileInclude(
+            {
+                prefix:"@@",
+                basepath:"@file",
+                context: globalVariables
+            }
+        ))
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest(paths.dist))
         .pipe(browserSync.stream());
@@ -54,6 +78,7 @@ function serve() {
     gulp.watch(paths.styles, styles);
     gulp.watch(paths.scripts, scripts);
     gulp.watch(paths.html, html);
+    gulp.watch(paths.partials, html);
     gulp.watch(paths.images, images);
 }
 
