@@ -1,0 +1,75 @@
+@import "generic.css";
+@import "header.css";
+@import "mainpage.css";
+@import "components/uniform_article.css";
+@import "components/footer.css";
+@import "components/sponsored.css";
+@import "components/article.css";
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    src: url("../fonts/Montserrat/Montserrat-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    src: url("../fonts/Montserrat/Montserrat-ThinItalic.ttf") format("truetype");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    src: url("../fonts/Montserrat/Montserrat-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    src: url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    src: url("../fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    src: url("../fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Monserrat", sans-serif;
+    font-weight: 400;
+    src: url("../fonts/Montserrat/Montserrat-Italic.ttf");
+    font-style: italic;
+}

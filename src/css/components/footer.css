@@ -1,0 +1,462 @@
+footer{
+    background-color: #333333;
+    position: relative;
+}
+
+.hide-show{
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    background-image: url("../../img/arrow-right-white.svg");
+    transform: translateY(-50%) rotate(-90deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0f8040;
+    height: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+footer .upper{
+    display: flex;
+    padding: 2.325rem 4rem 0 4rem;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.upper .upper-left{
+    display: flex;
+}
+
+.links ul{
+    padding-left: 0;
+    margin: 0;
+}
+
+.links > ul li+li{
+    margin-top: 1.25rem;
+}
+
+.links a{
+    color: #b2b2b2;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.links .image-links{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.image-links > a + a{
+    margin-left: 1rem;
+}
+
+.upper-left .categories{
+    display: flex;
+    margin-left: clamp(2rem,8.68vw,10.75rem);
+}
+
+.category-column span{
+    height: auto;
+    color: #b2b2b2;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.category-column + .category-column{
+    margin-left: 4rem;
+}
+
+.category-column span:before{
+    content: "";
+    height: 0.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--category-color);
+    margin-right: 0.5rem;
+}
+
+.category-column a + a{
+    margin-top: 1.25rem;
+    display: block;
+}
+
+.upper .upper-right{
+    width: 26.4375rem;
+    color: white;
+    margin-left: 3rem;
+}
+
+.upper-right .newsletter-main{
+    font-size: 24px;
+    font-weight: 600;
+    height: auto;
+}
+
+.upper-right .newsletter-secondary{
+    font-size: 16px;
+    font-weight: 400;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+.newsletter-form{
+    margin-top: 2rem;
+    position: relative;
+    max-width: 100%;
+}
+
+.newsletter-form input:focus{
+    outline: none;
+}
+
+.newsletter-form input[type = "email"]{
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1.25rem 10rem 1.25rem 1rem;
+    background-color: #3b3b3b;
+    border: solid 1px #4d4d4d;
+    color: #b2b2b2;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.newsletter-form button[type = "submit"]{
+    top: 0;
+    position: absolute;
+    right: 0;
+    width: 10rem;
+    max-width: 10rem;
+    height: 100%;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #0f8040;
+    cursor: pointer;
+    align-items: center;
+}
+
+.lower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: #333333;
+    position: relative;
+    color: #b2b2b2;
+}
+
+.lower:before{
+    display: block;
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #474747;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.lower .copyright{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.lower > div span{
+    color: #b2b2b2;
+    font-size: 12px;
+    height: auto;
+}
+
+.design-credits:after{
+    content: url("../../img/footer/morkva.png");
+    margin-left: 0.5rem;
+}
+
+.design-credits{
+    margin-bottom: 0.5rem;
+}
+
+.dev-credits.underscored{
+    margin-left: 0.25rem;
+    text-decoration: underline;
+}
+
+.lower .image-links{
+    display: none;
+}
+
+footer.collapsed{
+    margin-top: 6rem;
+}
+
+footer.collapsed .hide-show{
+    transform: translateY(calc(-100% - 3rem)) rotate(-90deg);
+}
+
+footer.collapsed .lower .image-links{
+    display: initial;
+}
+
+footer.collapsed .upper{
+    display: none;
+}
+
+@media (max-width: 1280px) {
+    footer .upper{
+        padding: 4rem 4.75rem 0 4.75rem;
+    }
+
+    .hide-show{
+        right: 4.75rem;
+    }
+
+    .upper-left .categories{
+        margin-left: 2.5rem;
+    }
+
+    .category-column{
+        max-width: 11.75rem;
+    }
+
+    .category-column + .category-column{
+        margin-left: 1.5rem;
+    }
+
+    .category-column a + a{
+        margin-top: 1rem;
+    }
+
+    .category-column a{
+
+    }
+
+    .category-column span{
+        overflow-wrap: break-word;
+    }
+
+    .upper .upper-right{
+        width: 22.5rem;
+    }
+
+    .upper-right .newsletter-main{
+        font-size: 22px;
+    }
+
+    .newsletter-form{
+        margin-top: 1.5rem;
+    }
+
+    .lower .copyright{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 768px){
+
+    .hide-show{
+        right: 2rem;
+    }
+
+    footer .upper{
+        flex-flow: column nowrap;
+        padding: 4rem 1.75rem 0 1.75rem;
+    }
+
+    .upper .upper-right{
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+        margin-left: 0;
+    }
+
+    footer .upper-left{
+        order: 2;
+        flex-flow: column nowrap;
+    }
+
+    .upper-left .links{
+        order: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .upper-left .categories{
+        order: 1;
+        margin-left: 0;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+
+    .categories .category-column{
+        max-width: initial;
+    }
+
+    .category-column + .category-column{
+        margin-left: 0;
+    }
+
+    .newsletter-form input[type = "email"]{
+        padding: 1.125rem 10rem 1rem 1rem;
+        width: 28rem;
+    }
+
+    .links > ul li + li{
+        margin-top: 2rem;
+    }
+
+    .links .image-links{
+        margin-top: 0;
+    }
+
+    .image-links img{
+        width: 2.5rem;
+        aspect-ratio: 1/1;
+    }
+
+    .image-links > a + a{
+        margin-left: 1.5rem;
+    }
+
+    .lower{
+        padding: 2rem 1.75rem;
+    }
+
+    footer.collapsed .image-links img{
+        width: 1.5rem;
+    }
+
+    .lower .copyright{
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    footer .upper{
+        padding: 4rem 1rem 0 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .upper .upper-right{
+        margin-bottom: 2rem;
+    }
+
+    .upper-right .newsletter-main{
+        color: transparent;
+        position: relative;
+        user-select: none;
+    }
+
+    .upper-right .newsletter-main:after{
+        content: "Підписатись на розсилку";
+        color: white;
+        position: absolute;
+        left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .upper-right .newsletter-secondary{
+        display: none;
+    }
+
+    .upper-left .categories{
+        flex-direction: column;
+    }
+
+    .categories .category-column{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .category-column a, .category-column a+a{
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .upper-left .links{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .links > ul li{
+        display: flex;
+        justify-content: center;
+    }
+
+    .links .image-links{
+        margin-top: 2rem;
+    }
+
+    .image-links img{
+        width: 3rem;
+    }
+
+    .image-links > a + a{
+        margin-left: 2rem;
+    }
+
+    .lower{
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    .lower .copyright{
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .lower .image-links + div{
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer.collapsed .lower{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 4rem 1rem 2rem 1rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer.collapsed .lower .image-links{
+        order: 1;
+        width: 100%;
+        margin-bottom: 4rem;
+        justify-content: center;
+        display: flex;
+    }
+
+    footer.collapsed .image-links img{
+        width: 3rem;
+    }
+
+    footer.collapsed .lower .copyright{
+        order: 2;
+        max-width: calc(50% - 2.25rem);
+        align-self: center;
+    }
+
+    footer.collapsed .lower .image-links + div{
+        order: 3;
+        max-width: calc(50% - 2.25rem);
+        margin-top: 0;
+    }
+}

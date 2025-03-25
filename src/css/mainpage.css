@@ -1,0 +1,149 @@
+ #articles{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: clamp(24px, 1.66vw ,32px);
+    width: auto;
+    grid-template-rows: repeat(4, 20.625rem);
+    grid-row-gap: 2rem;
+    max-width: 100%;
+}
+
+  .chapters-wrapper{
+    grid-column: span 3;
+    background-color: #fafafa;
+    padding: 4.5rem 0 4.5rem 2rem;
+    height: auto;
+    font-size: 32px;
+    grid-row: span 2;
+}
+
+  .chapters-wrapper > span{
+    font-size: 32px;
+}
+
+  .chapters-wrapper > span + .chapter{
+    margin-top: calc(3.75rem - 7px);
+}
+
+  .chapters-wrapper > .chapter{
+    margin-top: calc(1.5rem - 7px);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+  .chapters-wrapper .chapter .notification{
+    font-size: 12px;
+}
+
+
+
+.load-more{
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+.load-more:before{
+    content: url("../img/loadmore.svg");
+    margin-right: 0.5rem;
+    display: flex;
+}
+
+.load-more:hover:before{
+    content: url("../img/loadmore-white.svg");
+}
+
+
+
+@media(max-width: 1280px){
+     #articles{
+        grid-column-gap: clamp(6px, 1.875vw, 24px);
+        grid-template-rows: repeat(4, 16rem);
+        grid-row-gap: 24px;
+    }
+
+      .chapters-wrapper{
+        grid-column: span 4;
+    }
+
+    .load-more{
+        padding: 1rem 2.25rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+     #articles{
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 24px;
+        grid-template-rows: repeat(6, 18.45rem );
+    }
+
+      .chapters-wrapper{
+        grid-column: span 2;
+    }
+
+    .chapters-wrapper > span{
+        font-size: 28px;
+    }
+
+    .chapters-wrapper > span + .chapter{
+        margin-top: calc(1.5rem - 7px);
+    }
+
+    .chapters-wrapper{
+        padding: 2rem 0 2rem 1.5rem;
+        order: 1;
+    }
+
+    .load-more{
+        padding: 1rem 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #articles{
+        grid-template-columns: 1fr;
+        padding: 0;
+        grid-template-rows: unset;
+        grid-column-gap: 0;
+    }
+
+    .chapters-wrapper{
+       grid-column: span 1;
+       order:2
+    }
+
+    .mobile-chapter-opener{
+        display: flex !important;
+        align-self: start;
+        order: 2;
+        grid-row: auto;
+        height: auto;
+        grid-column: span 1;
+    }
+
+    .mobile-chapter-opener:before{
+        content: url("../img/chapter-burger.svg");
+        align-content: center;
+        margin-right: 0.5rem;
+    }
+
+    .mobile-chapter-opener:hover:before{
+        content: url("../img/chapter-burger-white.svg");
+    }
+
+    :not(.mobile-chapter-opener.active) ~ .chapters-wrapper{
+        display: none;
+    }
+
+    .grid-article-wrapper{
+        margin-top: 0;
+    }
+
+    .load-more{
+        width: 28rem;
+    }
+}
