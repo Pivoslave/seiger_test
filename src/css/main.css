@@ -5,6 +5,7 @@
 @import "components/footer.css";
 @import "components/sponsored.css";
 @import "components/article.css";
+@import "components/chapters.css";
 
 @font-face {
     font-family: "Montserrat", sans-serif;

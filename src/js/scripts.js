@@ -1,5 +1,5 @@
 document.querySelector("header div.signin").
-    addEventListener("click", () => switchLoginWindow());
+addEventListener("click", () => switchLoginWindow());
 
 document.querySelector("header div.checkbox-wrapper").
     addEventListener("click", () => emulateCheckboxClick())
@@ -28,7 +28,7 @@ window.addEventListener("resize", () => {
     articlesGridHeightNormalizer();
 })
 
-document.querySelector("#articles .mobile-chapter-opener").
+document.querySelector(".mobile-chapter-opener").
     addEventListener("click", (e) => e.target.classList.toggle("active"));
 
 document.querySelector("footer .hide-show").addEventListener(

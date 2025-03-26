@@ -11,65 +11,32 @@
         @@include('partials/header.html')
     
         <main class="grid-wrapper container">
-            <div id="articles">
+            
+            <div class="main-chapter-wrapper">
                 
                 <button class="secondary mobile-chapter-opener">
                     Усі розділи
                 </button>
                 
-                <div class="chapters-wrapper">
-                    <span>Розділи</span>
-                    
-                    <div class="chapter">
-                        <div class="chapter-color"></div>
-                        <a href="#">Енергія вітру
-                            <div class="notification active">
-                                +1
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="chapter">
-                        <div class="chapter-color"></div>
-                        <a href="#">Сонячна енергія
-                            <div class="notification active">
-                                +1
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="chapter">
-                        <div class="chapter-color"></div>
-                        <a href="#">Гідроенергетика
-                            <div class="notification active">
-                                +1
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="chapter">
-                        <div class="chapter-color"></div>
-                        <a href="#">Енергія приливів
-                            <div class="notification active">
-                                +1
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                @@include('partials/chapters.html')
                 
                 @@include('partials/main_article.html', {
-                    "stripcolor": "darkblue",
-                    "category": "Сонячна енергія",
-                    "header": "Заголовок головної статті",
-                    "preview": "Текст-прев'ю головної статті",
-                    "views": 76,
-                    "comments": 5,
-                    "shares": 10,
-                    "author": "aeroboy123",
-                    "date": "25 бер. 2023",
-                    "avatar": "img/test-login-pic.png",
-                    "bg_url": "../../img/article-bgs/vitryaky.png"
+                "stripcolor": "darkblue",
+                "category": "Сонячна енергія",
+                "header": "Заголовок головної статті",
+                "preview": "Текст-прев'ю головної статті",
+                "views": 76,
+                "comments": 5,
+                "shares": 10,
+                "author": "aeroboy123",
+                "date": "25 бер. 2023",
+                "avatar": "img/test-login-pic.png",
+                "bg_url": "../../img/article-bgs/vitryaky.png"
                 })
+            
+            </div>
+            
+            <div id="articles">
                 
                 @@include('partials/article.html', {
                     additional: "high-article"

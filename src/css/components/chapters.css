@@ -1,0 +1,92 @@
+.chapters-wrapper{
+    grid-column: span 3;
+    background-color: #fafafa;
+    padding: 4rem 2rem;
+    height: auto;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.chapters-wrapper > span + .chapter{
+    margin-top: calc(4rem - 7px);
+}
+
+.chapters-wrapper > .chapter{
+    margin-top: calc(2rem);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.chapters-wrapper .chapter .notification{
+    font-size: 12px;
+}
+
+
+.chapters-wrapper > span{
+    display: inline;
+}
+
+.chapter > .chapter-color{
+    height: 8px;
+    aspect-ratio: 1/1;
+    background-color: #e81e62;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.chapter > a{
+    display: flex;
+    position: relative;
+    padding-right: 1rem;
+}
+
+.chapter > a > .notification{
+    display: none;
+    position: absolute;
+    left: 100%;
+    background-color: #0f8040;
+    color: white;
+    border-radius: 50%;
+    padding: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    aspect-ratio: 1/1;
+}
+
+.chapter > a > .notification.active{
+    display: initial;
+}
+
+@media (max-width: 1280px) {
+    .chapters-wrapper{
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 768px) {
+    .chapters-wrapper{
+        grid-column: span 2;
+    }
+
+    .chapters-wrapper > span{
+        font-size: 28px;
+    }
+
+    .chapters-wrapper > span + .chapter{
+        margin-top: calc(1.5rem - 7px);
+    }
+
+    .chapters-wrapper{
+        padding: 2rem 0 2rem 1.5rem;
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .chapters-wrapper{
+        grid-column: span 1;
+        order:2
+    }
+}
