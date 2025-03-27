@@ -10,13 +10,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: space-between;
+    position: relative;
 }
 
 .main-article{
     grid-column: span 9;
     background-color: black;
     border-radius: 5px;
-    grid-row: span 2;
+    height: auto;
 }
 
 .article .top-strip{
@@ -157,6 +158,10 @@
     display: none;
 }
 
+.high-article{
+    height: 692px;
+}
+
 .high-article, .static-article{
     grid-row: span 2;
     grid-column: span 3;
@@ -170,10 +175,6 @@
     padding-right: 0;
     width: 0;
     visibility: hidden;
-}
-
-.static-article .article-footer{
-    display: none;
 }
 
 .text-stat-wrapper{
@@ -197,6 +198,28 @@
 .static-article{
     grid-column: span 3;
     grid-row: span 1;
+}
+
+.static-article .article-footer :not(.article-link){
+    display: none;
+}
+
+.static-article .article-footer{
+    margin: 0;
+    padding: 0;
+}
+
+.static-article .article-link{
+    position: absolute;
+    width: 100%;
+    color: transparent;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.static-article .article-link:after{
+    display: none;
 }
 
 .long-article{
@@ -230,17 +253,30 @@
         margin-top: 0;
     }
 
-    .high-article .article-footer{
+    .high-article .article-footer,
+    .long-article .article-footer{
         padding: 0;
         margin-top: 1rem;
     }
 
-    .high-article{
-        grid-column: span 4;
+    .high-article .article-footer a,
+    .long-article .article-footer a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: transparent;
     }
 
-    .high-article .article-footer a{
+    .high-article .article-footer a:after,
+    .long-article .article-footer a:after{
         display: none;
+    }
+
+    .high-article{
+        grid-column: span 4;
+        height: 536px;
     }
 
     .static-article .top-strip{
@@ -255,10 +291,6 @@
         grid-column: span 5;
     }
 
-    .long-article .article-footer > a{
-        display: none;
-    }
-
     .long-article .article-footer .stat-wrapper{
         justify-content: space-between;
         display: flex;
@@ -270,6 +302,7 @@
     .main-article{
         grid-column: span 4;
         order: 0;
+        height: 524px;
     }
 
     .high-article{
@@ -286,8 +319,20 @@
         padding: 0 1.5rem 1.5rem 1.5rem;
     }
 
-    .high-article .article-footer {
+    .high-article .article-footer .stat-wrapper,
+    .long-article:not(.tablet-long) .article-footer .stat-wrapper {
         display: none;
+    }
+
+    .high-article .article-footer,
+    .long-article:not(.tablet-long) .article-footer{
+        margin: 0;
+        padding: 0;
+    }
+
+    .long-article.tablet-long .article-footer .stat-wrapper{
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .static-article{
@@ -304,8 +349,15 @@
         grid-column: span 4;
     }
 
-    .long-article.tablet-long + .long-article .article-footer{
-        display: none;
+    .long-article.tablet-long .article-footer a{
+        position: relative;
+        color: white;
+        display: flex;
+        width: 50%;
+    }
+
+    .long-article.tablet-long .article-footer a:after{
+        display: initial;
     }
 
     .tablet-last{
@@ -325,7 +377,7 @@
     }
 
     .high-article, .static-article, .long-article{
-        height: 19.25rem;
+        height: 19.25rem !important;
     }
 
     .long-article .article-footer{

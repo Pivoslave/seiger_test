@@ -57,6 +57,7 @@ function openCloseMobileCart(){
 
 function openCloseMobileMenu(){
     let menu = document.querySelector(".mobile-menu-wrapper")?.classList.toggle("active");
+    document.body.classList.toggle('unscrollable');
 }
 
 function articlesGridHeightNormalizer(){

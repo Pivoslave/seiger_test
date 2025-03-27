@@ -279,10 +279,6 @@ header div.signin-menu > button + span{
 }
 
 @media (max-width: 1280px) {
-    header{
-        padding: 2rem 4.75rem;
-    }
-
     .logo-image{
         margin-right: clamp(0.5rem, 3vw,4rem);
         max-height: 2.75rem;
@@ -316,7 +312,6 @@ header div.signin-menu > button + span{
 }
 
 @media (max-width: 768px) {
-
     .burger-wrapper{
         display: flex;
         width: auto;
@@ -368,6 +363,7 @@ header div.signin-menu > button + span{
 
     .cart-wrapper.active > .mobile-cart{
         display: initial;
+        z-index: 13;
     }
 
     .cart-wrapper.active:before{
@@ -499,6 +495,7 @@ header div.signin-menu > button + span{
 
     .mobile-menu-wrapper.active{
         display: block;
+
     }
 
     .mobile-menu-wrapper{
@@ -577,6 +574,7 @@ header div.signin-menu > button + span{
         height: 1px;
         background-color: #f0f0f0;
         padding: 0;
+        display: block;
     }
 
     .mobile-nav-wrapper{
@@ -645,6 +643,10 @@ header div.signin-menu > button + span{
 
     .burger-wrapper{
         margin-right: 1rem;
+    }
+
+    .close-logo-wrapper{
+        height: auto;
     }
 
     .logo-image{

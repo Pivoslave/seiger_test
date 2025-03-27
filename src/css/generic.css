@@ -406,6 +406,10 @@ a.arrow-link.inverted:hover:before{
     position: relative;
 }
 
+.unscrollable{
+    overflow: hidden;
+}
+
 @media (max-width: 1280px) {
 
     button{

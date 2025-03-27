@@ -6,57 +6,58 @@
         <title>Main Page</title>
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
+    <body class="">
         
         @@include('partials/header.html')
     
         <main class="grid-wrapper container">
             
-            <div class="main-chapter-wrapper">
-                
-                <button class="secondary mobile-chapter-opener">
-                    Усі розділи
-                </button>
-                
-                @@include('partials/chapters.html')
-                
-                @@include('partials/main_article.html', {
-                "stripcolor": "darkblue",
-                "category": "Сонячна енергія",
-                "header": "Заголовок головної статті",
-                "preview": "Текст-прев'ю головної статті",
-                "views": 76,
-                "comments": 5,
-                "shares": 10,
-                "author": "aeroboy123",
-                "date": "25 бер. 2023",
-                "avatar": "img/test-login-pic.png",
-                "bg_url": "../../img/article-bgs/vitryaky.png"
-                })
-            
-            </div>
-            
-            <div id="articles">
-                
-                @@include('partials/article.html', {
-                    additional: "high-article"
-                })
-                
-                @@include('partials/article.html', {
-                additional: "static-article"
-                })
+            <div class="upper-grid">
                     
-                @@include('partials/article.html', {
-                additional: "long-article tablet-long"
-                })
-                
-                @@include('partials/article.html', {
-                additional: "long-article"
-                })
-                
-                @@include('partials/article.html', {
-                additional: "static-article tablet-last"
-                })
+                    <button class="secondary mobile-chapter-opener">
+                        Усі розділи
+                    </button>
+                    
+                    @@include('partials/chapters.html')
+                    
+                    @@include('partials/main_article.html', {
+                    "stripcolor": "darkblue",
+                    "category": "Сонячна енергія",
+                    "header": "Заголовок головної статті",
+                    "preview": "Текст-прев'ю головної статті",
+                    "views": 76,
+                    "comments": 5,
+                    "shares": 10,
+                    "author": "aeroboy123",
+                    "date": "25 бер. 2023",
+                    "avatar": "img/test-login-pic.png",
+                    "bg_url": "../../img/article-bgs/vitryaky.png"
+                    })
+                    
+                    @@include('partials/article.html', {
+                        additional: "high-article",
+                        bg_url: "../../img/article-bgs/boat.png"
+                    })
+                    
+                    @@include('partials/article.html', {
+                    additional: "static-article",
+                    bg_url: "../../img/article-bgs/baloon.png"
+                    })
+                    
+                    @@include('partials/article.html', {
+                    additional: "long-article tablet-long",
+                    bg_url: "../../img/article-bgs/sunpanels.png"
+                    })
+                    
+                    @@include('partials/article.html', {
+                    additional: "long-article",
+                    bg_url: "../../img/article-bgs/desert.png"
+                    })
+                    
+                    @@include('partials/article.html', {
+                    additional: "static-article tablet-last",
+                    bg_url:"../../img/article-bgs/blockchain.png"
+                    })
             </div>
             
             <div class="uniform-article-grid">

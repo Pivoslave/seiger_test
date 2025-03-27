@@ -31,7 +31,6 @@
 .chapter > .chapter-color{
     height: 8px;
     aspect-ratio: 1/1;
-    background-color: #e81e62;
     margin-right: 0.5rem;
     border-radius: 50%;
 }
@@ -62,12 +61,7 @@
 @media (max-width: 1280px) {
     .chapters-wrapper{
         grid-column: span 4;
-    }
-}
-
-@media (max-width: 768px) {
-    .chapters-wrapper{
-        grid-column: span 2;
+        padding: 3.25rem 1.5rem;
     }
 
     .chapters-wrapper > span{
@@ -75,11 +69,41 @@
     }
 
     .chapters-wrapper > span + .chapter{
+        margin-top: 3.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header .chapters-wrapper{
+        order: initial;
+    }
+
+    .chapters-wrapper{
+        grid-row: span 2;
+    }
+
+    .chapters-wrapper > span + .chapter{
         margin-top: calc(1.5rem - 7px);
+    }
+
+    .high-article{
+        grid-row: span 1;
+        height: auto;
+    }
+
+    .high-article + .static-article{
+        grid-row: span 1;
+        height: auto;
+    }
+
+    .static-article, .long-article{
+        height: 308px;
     }
 
     .chapters-wrapper{
         padding: 2rem 0 2rem 1.5rem;
+        grid-column: span 2;
         order: 1;
     }
 }
