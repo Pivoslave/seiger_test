@@ -312,6 +312,11 @@ header div.signin-menu > button + span{
 }
 
 @media (max-width: 768px) {
+
+    .burger-logo-wrapper{
+        display: flex;
+    }
+
     .burger-wrapper{
         display: flex;
         width: auto;
@@ -501,7 +506,7 @@ header div.signin-menu > button + span{
     .mobile-menu-wrapper{
         display: none;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         position: absolute;
         z-index: 30;
         top: 0;
@@ -519,6 +524,7 @@ header div.signin-menu > button + span{
         display: flex;
         flex-flow: column nowrap;
         padding: 2rem 0;
+        overflow-x: hidden;
     }
 
     .mobile-menu > :not(.mobile-delimiter){
@@ -647,10 +653,6 @@ header div.signin-menu > button + span{
 
     .close-logo-wrapper{
         height: auto;
-    }
-
-    .logo-image{
-        margin-right: 12.875rem;
     }
 
     .cart-wrapper{

@@ -387,6 +387,10 @@ footer.collapsed .upper{
         margin-top: 2rem;
     }
 
+    .newsletter-form input[type = "email"]{
+        width: auto;
+    }
+
     .upper-left .links{
         flex-flow: column nowrap;
         align-items: center;

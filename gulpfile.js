@@ -27,7 +27,7 @@ const chapters = [
     {name: "Енергія приливів", color: "#2195f2", count: 86, notifications: 1},
     {name: "Енергія хвиль", color: "#00bbd3", count: 78},
     {name: "Геотермальна енергія", color: "#009587", count: 59},
-    {name: "Розсіяна теплова енергія", color: "#4bae4f", count: 43},
+    {name: "Розсіяна теплова енергія", color: "#4bae4f", count: 43, notifications: 1},
     {name: "Енергія біомаси", color: "#8cc737", count: 32},
     {name: "Енергія вітру", color: "#feea3b", count: 25},
     {name: "Сонячна енергія", color: "#fe9700", count: 18, notifications: 3},
@@ -44,10 +44,10 @@ const generateChaptersHTML = () => {
         let n =
             '<div class="chapter">' +
             `<div class="chapter-color" style="background-color: ${chapter.color}"></div>` +
-            `<a href="#">${chapter.name} (${chapter.count})` +
-            (!chapter.notifications ? '' :
-              `<div class="notification active">+${chapter.notifications}</div>`) +
+            `<a href="#">${chapter.name} (${chapter.count})`  +
             '</a>' +
+                (!chapter.notifications ? '' :
+                    `<div class="notification">+${chapter.notifications}</div>`) +
             '</div>';
 
         code += n;
