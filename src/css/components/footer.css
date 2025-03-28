@@ -26,11 +26,7 @@ footer .upper {
 
 .upper .upper-left {
   display: flex;
-}
-
-.links ul {
-  padding-left: 0;
-  margin: 0;
+  column-gap: clamp(2.5rem, 8.95vw, 10.75rem);
 }
 
 .links > ul li + li {
@@ -83,7 +79,7 @@ footer .upper {
 }
 
 .upper .upper-right {
-  width: 26.4375rem;
+  width: clamp(358px, 21.979vw,422px);
   color: white;
   margin-left: 3rem;
 }
@@ -129,7 +125,6 @@ footer .upper {
   position: absolute;
   right: 0;
   width: 10rem;
-  max-width: 10rem;
   height: 100%;
   border: none;
   border-radius: 0 8px 8px 0;
@@ -209,11 +204,15 @@ footer.collapsed .upper {
 
 @media (max-width: 1280px) {
   footer .upper {
-    padding: 4rem 4.75rem 0 4.75rem;
+    padding: 4rem clamp(2px,5.93vw,4.75rem) 0 clamp(2px,5.93vw,4.75rem);
   }
 
   .hide-show {
     right: 4.75rem;
+  }
+
+  .upper .upper-left{
+    column-gap: clamp(10px, 3.125vw, 2.5rem)
   }
 
   .upper-left .categories {
@@ -253,6 +252,14 @@ footer.collapsed .upper {
 
   .lower .copyright {
     font-size: 12px;
+  }
+
+  .newsletter-form button[type="submit"] {
+    width: clamp(2px,12.5vw,10rem);
+  }
+
+  .newsletter-form input[type="email"] {
+    padding: 1.25rem clamp(2px,12.5vw,10rem) 1.25rem 1rem;
   }
 }
 
@@ -336,6 +343,16 @@ footer.collapsed .upper {
 
   .lower .copyright {
     max-width: 25%;
+  }
+
+  .newsletter-form button[type="submit"] {
+    width: clamp(2px,20.83vw,10rem);
+  }
+
+  .newsletter-form input[type="email"] {
+    padding-right: clamp(2px,20.83vw,10rem);
+    min-width: 26rem;
+    width: auto;
   }
 }
 

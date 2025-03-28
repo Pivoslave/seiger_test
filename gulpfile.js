@@ -33,27 +33,56 @@ const chapters = [
     {name: "Сонячна енергія", color: "#fe9700", count: 18, notifications: 3},
     {name: "Гідроенергетика", color: "#c632e0", count: 9},
     {name: "Енергія приливів", color: "#bfc3de", count: 0},
+    {name: "Енергія приливів", color: "#bfc3de", count: 0},
 ];
 
 const generateChaptersHTML = () => {
 
     let code = '';
 
-    for(let chapter of chapters){
+    for(let i = 0; i < chapters.length; i++) {
+
+        let chapter = chapters[i];
 
         let n =
-            '<div class="chapter">' +
+            `<div class="chapter" data-q="${i}">` +
             `<div class="chapter-color" style="background-color: ${chapter.color}"></div>` +
-            `<a href="#">${chapter.name} (${chapter.count})`  +
+            `<a href="#">${chapter.name} (${chapter.count})` +
             '</a>' +
-                (!chapter.notifications ? '' :
-                    `<div class="notification">+${chapter.notifications}</div>`) +
+            `<div class="notification" ${!chapter.notifications > 0 ? "style='visibility:hidden'" : ''}>+${!chapter.notifications ? '' : chapter.notifications}</div>` +
             '</div>';
 
         code += n;
     }
 
-    console.log(code);
+    return code;
+}
+
+const generateFooterChapters = () => {
+    let code = '';
+    const columns = 3;
+    const baseRows = Math.ceil(chapters.length/3);
+
+    for(let i = 0; i < chapters.length; i++) {
+
+        let chapter = chapters[i];
+
+        if(i % baseRows === 0)
+            code += '<div class="footer-column">';
+
+        let n =
+            `<div class="chapter" data-q="${i}">` +
+            `<div class="chapter-color" style="background-color: ${chapter.color}"></div>` +
+            `<a href="#">${chapter.name}</a>` +
+            '</div>';
+
+        code += n;
+
+        if(i % baseRows === baseRows - 1 ||
+            (chapters.length / columns !== baseRows && i === chapters.length - 1))
+            code += '</div>';
+    }
+
     return code;
 }
 
@@ -71,6 +100,7 @@ const globalVariables = {
     preview: "Текст-прев'ю за замовчуванням",
     bg_url: "../../img/article-bgs/vitryaky.png",
     chaptersHTML: generateChaptersHTML(),
+    footerChapters: generateFooterChapters()
 };
 
 function styles() {
